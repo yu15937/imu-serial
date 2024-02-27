@@ -33,7 +33,6 @@ void MainWindow::dealDBViewDialogDestroy(){
 //Imu串口数据处理逻辑
 void MainWindow::handleData(){
     QByteArray buf = ptr->serial->readAll();
-    //qDebug()<<buf<<",size:"<<buf.size();
     if(!buf.isEmpty()){
         QString str = ui->receiveScreen->toPlainText();
         str += tr(buf);
